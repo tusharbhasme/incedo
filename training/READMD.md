@@ -42,3 +42,7 @@ Functions :
 
 		if user_id --> check issue history --> deallocate last entry --> confirm --> +1 to no of same books
 
+
+> Solution is expected to be OOPS based 
+> Please make use of map / decorators
+> Code should be PEP8 compliant 
