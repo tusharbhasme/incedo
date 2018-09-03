@@ -1,0 +1,18 @@
+<h1> {{ title }} </h1>
+
+<p>
+    <table>
+    {% for book in book_list %}
+
+    <tr><th>{{ book.isbn }}</th></tr>
+    <tr><th>{{ book.book_name }}</th></tr>
+    <tr><th>{{ book.publication }}</th></tr>
+    <tr><th>{{ book.author }}</th></tr>
+    <tr><th>{{ book.stock }}</th></tr>
+    <tr><th><a href="{% url 'addbook' %}"><input type="button" value="add"/></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="/allocator/delbook/{{book.isbn}}/"><input type="button" value="delete"/></a></th></tr>
+    <tr><th>------------------------------------------</th></tr>
+
+    {% endfor %}
+    </table>
+</p>

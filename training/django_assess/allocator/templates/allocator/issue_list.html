@@ -1,0 +1,17 @@
+<h1> {{ title }} </h1>
+
+<p>
+    <table>
+    {% for issue in issue_list %}
+
+    <tr><th>{{ issue.id }}.{{ issue.isbn }}</th></tr>
+    <tr><th>{{ issue.member_id }}</th></tr>
+    <tr><th>{{ issue.issue_date }}</th></tr>
+    <tr><th>{{ issue.return_date }}</th></tr>
+    <tr><th><input type="button" value="Extend"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="/allocator/returnbook/{{issue.id}}"><input type="button" value="Return"/></a></th></tr>
+    <tr><th>------------------------------------------</th></tr>
+
+    {% endfor %}
+    </table>
+</p>

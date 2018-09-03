@@ -1,0 +1,15 @@
+<h1> {{ title }} </h1>
+
+<p>
+    <table>
+    {% for member in member_list %}
+
+    <tr><th>{{ member.member_id }}.{{ member.member_name }}</th></tr>
+    <tr><th>{{ member.mob_no }}</th></tr>
+    <tr><th><a href="{% url 'addmember' %}"><input type="button" value="add"/></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="/allocator/delmember/{{member.member_id}}"><input type="button" value="delete"/></a></th></tr>
+    <tr><th>------------------------------------------</th></tr>
+
+    {% endfor %}
+    </table>
+</p>
